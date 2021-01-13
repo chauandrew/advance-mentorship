@@ -2,6 +2,6 @@
     "testing": {
         "sheetId": 0,
         "spreadsheetId": "12-fGFaICzJEJEN0p9MYJp5aAsTHmEqqgLK_Q-sbcwh0",
-        "columns": ["key", "value"]
+        "columns": ["Key", "Value"]
     }
 }

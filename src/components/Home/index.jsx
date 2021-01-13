@@ -1,19 +1,21 @@
 import { React, useState } from 'react';
 import { Container, Button } from 'react-bootstrap';
-import sheets from '../../api/sheets';
+import sheets from '../../api/gsheets';
 
 
 const Home = () => {
     const [rows, setRows] = useState(null);
 
     const displayRows = async () => {
-        sheets.getRows().then((res) => {
-            let output = <ul>
-                {
-                    res.map((row, i) => <li key={i}>{row._rawData}</li>)
-                }
-            </ul>
-            setRows(output);
+        sheets.getRows('testing', {"Value": "Chen"}).then((res) => {
+            if (res) {
+                let output = <ul>
+                    {
+                        res['rows'].map((row, i) => <li key={i}>{row}</li>)
+                    }
+                </ul>
+                setRows(output);
+            }
         })
     }
 
