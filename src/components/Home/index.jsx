@@ -7,7 +7,7 @@ const Home = () => {
     const [rows, setRows] = useState(null);
 
     const displayRows = async () => {
-        sheets.getRows('testing', {"Value": "Chen"}).then((res) => {
+        sheets.getRows('testing').then((res) => {
             if (res) {
                 let output = <ul>
                     {
