@@ -1,0 +1,25 @@
+/**
+ * This file modifies the default bootstrap themes
+ *
+ * Helpful Documentation:
+ * - https://create-react-app.dev/docs/adding-bootstrap/#using-a-custom-theme
+ * - https://getbootstrap.com/docs/4.1/getting-started/theming/#css-variables
+ */
+
+// Font imports for Manrope & Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+// Override default variables before the import
+$theme-colors: (
+  "primary": #EFCB6A
+);
+
+h2, h4, h6 {
+  font-family: Manrope;
+}
+h1, h3, h5, p, a {
+  font-family: Inter;
+}
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

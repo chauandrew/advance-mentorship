@@ -18,7 +18,12 @@ const Home = () => {
     }
 
     return (
-        <Container>Hello world!
+        <Container>
+            <h2>ADVANCE<br />MENTORSHIP<br />PROGRAM</h2>
+            <p>
+                Make your college journey matter.<br />
+                Designed for your personal and professional growth.
+            </p>
             <Button onClick={displayRows}>Display Rows!</Button>
             {rows}
 

@@ -1,15 +1,20 @@
 import React from 'react';
-import {Navbar, Nav} from 'react-bootstrap'
+import {Navbar, Nav, Button} from 'react-bootstrap'
+import Logo from '../../../assets/amp-logo-header.png'
 
 
 const Header = () => {
     return(
         <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#">Link1</Nav.Link>
-          <Nav.Link href="#">Link2</Nav.Link>
-          <Nav.Link href="#">Link3</Nav.Link>
+        <Navbar.Brand href="/">
+          <img src={Logo} alt="Logo" height="60" />
+        </Navbar.Brand>
+        <Nav className="ml-auto">
+          <Nav.Link href="/campuses">CAMPUSES</Nav.Link>
+          <Nav.Link href="/mentors">COLLEGE MENTORS</Nav.Link>
+          <Nav.Link href="/advisors">ADVISORS</Nav.Link>
+          <Nav.Link href="/program">PROGRAM</Nav.Link>
+          <Button href="/apply">APPLY NOW</Button>
         </Nav>
       </Navbar>
     )
