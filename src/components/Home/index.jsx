@@ -1,24 +1,7 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { Container, Button } from 'react-bootstrap';
-import sheets from '../../api/gsheets';
-
 
 const Home = () => {
-    const [rows, setRows] = useState(null);
-
-    const displayRows = async () => {
-        sheets.getRows('testing').then((res) => {
-            if (res) {
-                let output = <ul>
-                    {
-                        res['rows'].map((row, i) => <li key={i}>{row}</li>)
-                    }
-                </ul>
-                setRows(output);
-            }
-        })
-    }
-
     return (
         <Container>
             <h2>ADVANCE<br />MENTORSHIP<br />PROGRAM</h2>
@@ -26,9 +9,7 @@ const Home = () => {
                 Make your college journey matter.<br />
                 Designed for your personal and professional growth.
             </p>
-            <Button onClick={displayRows}>Display Rows!</Button>
-            {rows}
-
+            <Button href="/apply">Apply for a mentor</Button>
         </Container>
     )
 }
