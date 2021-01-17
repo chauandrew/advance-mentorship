@@ -6,7 +6,6 @@ const PRIVATE_KEY = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY.replace(/\\
 const GOOGLE_AUTH_SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 
 const config = require('../config/google-sheets.json')
-
 /**
  * Get all rows from a gsheet where the first row contains column names,
  * and the rest contain data. Make sure new sheets are added to 
@@ -24,9 +23,9 @@ const getRows = async (sheetName, filters = {}) => {
     if (!(sheetName in config)) {
         throw new Error(`Error: Could not find sheet '${sheetName}'`);
         return null;
-    } else if (typeof(filters) !== 'object') {
-        console.log(`Warning: Could not filter by '${filters}'.` + 
-                    ' Defaulting to {} instead.');
+    } else if (typeof (filters) !== 'object') {
+        console.log(`Warning: Could not filter by '${filters}'.` +
+            ' Defaulting to {} instead.');
         filters = {};
     }
 
@@ -37,10 +36,10 @@ const getRows = async (sheetName, filters = {}) => {
         scopes: GOOGLE_AUTH_SCOPES
     })
     await client.authorize();
-    let url = "https://sheets.googleapis.com/v4/spreadsheets/" + 
+    let url = "https://sheets.googleapis.com/v4/spreadsheets/" +
         `${config[sheetName]['spreadsheetId']}/values/${sheetName}!A1:Z1000`
     let opts = {
-        headers: { "authorization": `${client.credentials.token_type} ${client.credentials.access_token}`}
+        headers: { "authorization": `${client.credentials.token_type} ${client.credentials.access_token}` }
     }
     let rows = (await axios.get(url, opts)).data.values
     let columnNames = rows.shift() // 0th element of 'rows' holds column names

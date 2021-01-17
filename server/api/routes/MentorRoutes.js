@@ -1,9 +1,17 @@
 const express = require('express');
-const router =  express.Router();
+const router = express.Router();
+const gsheetService = require('../../services/GsheetService');
 
+/**
+ * Return all college mentors
+ */
 router.get('/', (_, res) => {
-    console.log('hello')
-    res.send("hello!");
+    gsheetService.getRows('mentors')
+        .then(rows => res.json(rows))
+        .catch(err => {
+            res.status(400)
+            res.send(err)
+        })
 })
 
 module.exports = router;

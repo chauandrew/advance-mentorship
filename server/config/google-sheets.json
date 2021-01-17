@@ -2,11 +2,48 @@
     "testing": {
         "sheetId": 0,
         "spreadsheetId": "12-fGFaICzJEJEN0p9MYJp5aAsTHmEqqgLK_Q-sbcwh0",
-        "columns": ["Key", "Value", "Row"]
+        "columns": [
+            "Key",
+            "Value",
+            "Row"
+        ]
     },
     "campuses": {
         "sheetId": 243477905,
         "spreadsheetId": "12-fGFaICzJEJEN0p9MYJp5aAsTHmEqqgLK_Q-sbcwh0",
-        "columns": ["name", "anchor", "imgUrl"]
+        "columns": [
+            "name",
+            "anchor",
+            "imgUrl"
+        ]
+    },
+    "mentors": {
+        "sheetId": 712336487,
+        "spreadsheetId": "12-fGFaICzJEJEN0p9MYJp5aAsTHmEqqgLK_Q-sbcwh0",
+        "columns": [
+            "name",
+            "major",
+            "univ",
+            "tagline",
+            "imgUrl"
+        ]
+    },
+    "advisors": {
+        "sheetId": 1486922186,
+        "spreadsheetId": "12-fGFaICzJEJEN0p9MYJp5aAsTHmEqqgLK_Q-sbcwh0",
+        "columns": [
+            "name",
+            "mainPage",
+            "gpCampus",
+            "degree1",
+            "school1",
+            "degree2",
+            "school2",
+            "company",
+            "title",
+            "linkedin",
+            "degree3",
+            "school3"
+        ]
     }
 }
