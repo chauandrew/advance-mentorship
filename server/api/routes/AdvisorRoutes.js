@@ -14,6 +14,9 @@ router.get('/', (_, res) => {
         })
 })
 
+/**
+ * All professional advisors by campus short name (eg apu, american, ucla)
+ */
 router.get('/campus/:campusName', (req, res) => {
     gsheetService.getRows('advisors', { "gpCampus": req.params.campusName })
         .then(rows => res.json(rows))
