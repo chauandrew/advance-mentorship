@@ -3,5 +3,10 @@
         "sheetId": 0,
         "spreadsheetId": "12-fGFaICzJEJEN0p9MYJp5aAsTHmEqqgLK_Q-sbcwh0",
         "columns": ["Key", "Value", "Row"]
+    },
+    "campuses": {
+        "sheetId": 243477905,
+        "spreadsheetId": "12-fGFaICzJEJEN0p9MYJp5aAsTHmEqqgLK_Q-sbcwh0",
+        "columns": ["campuses", "anchor", "imgUrl"]
     }
 }

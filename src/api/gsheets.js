@@ -17,7 +17,7 @@ const config = require('../config/google-sheets.json')
  * 
  * @param {string} sheetName - the name of the sheet to search
  * @param {Object} [filters={}] - case insensitive equality filters to match
- * @returns {Object} Object with 'columnNames' and 'rows' features
+ * @returns {Object} Object with 'columnNames', 'keymap' and 'rows' features
  */
 const getRows = async (sheetName, filters = {}) => {
     // check that sheet and filters exist
@@ -57,9 +57,15 @@ const getRows = async (sheetName, filters = {}) => {
     }
     let response = {
         'columnNames': columnNames,
+        'keymap': {},
         'rows': []
     };
+    // Generate keymap of columnName -> columnNum
+    for (let i = 0; i < columnNames.length; i++) {
+        response['keymap'][columnNames[i]] = i;
+    }
 
+    // filter rows by given search query
     for (let i = 0; i < rows.length; ++i) {
         let valid = true;
         for (const column in filterIndices) {

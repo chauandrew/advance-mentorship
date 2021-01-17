@@ -1,0 +1,10 @@
+.campus-img {
+    position: absolute;
+    z-index: -1;
+}
+
+.campus-txt {
+    padding:auto;
+    text-align: center;
+    color: white;
+}
