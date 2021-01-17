@@ -1,6 +1,6 @@
 import axios from "axios"
 
-var prefix = "https://advancementorship.herokuapp.com/"
+var prefix = "https://advancementorship.herokuapp.com"
 // prefix = "http://localhost:4000" // uncomment for local testing
 
 export default {
