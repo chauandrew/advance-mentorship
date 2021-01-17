@@ -1,14 +1,14 @@
 import { React, useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import gsheets from '../../api/gsheets';
+import api from '../../utils/api';
 import './style.css'
 
 const Campuses = () => {
     const [campuses, setCampuses] = useState(null);
 
     useEffect(() => {
-        gsheets.getRows("campuses").then((res) => {
+        api.getCampuses().then((res) => {
             let rows = res['rows']
             let keymap = res['keymap']
             let cards = []

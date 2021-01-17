@@ -2,7 +2,7 @@ const { JWT } = require('google-auth-library')
 const axios = require('axios');
 
 const CLIENT_EMAIL = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL;
-const PRIVATE_KEY = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY;
+const PRIVATE_KEY = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY.replace(/\\n/gm, '\n'); // use real line breaks
 const GOOGLE_AUTH_SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 
 const config = require('../config/google-sheets.json')
@@ -22,10 +22,10 @@ const config = require('../config/google-sheets.json')
 const getRows = async (sheetName, filters = {}) => {
     // check that sheet and filters exist
     if (!(sheetName in config)) {
-        console.error(`Error: Could not find sheet '${sheetName}'`);
+        throw new Error(`Error: Could not find sheet '${sheetName}'`);
         return null;
     } else if (typeof(filters) !== 'object') {
-        console.warn(`Warning: Could not filter by '${filters}'.` + 
+        console.log(`Warning: Could not filter by '${filters}'.` + 
                     ' Defaulting to {} instead.');
         filters = {};
     }
@@ -50,8 +50,7 @@ const getRows = async (sheetName, filters = {}) => {
     for (const filter in filters) {
         let index = columnNames.indexOf(filter);
         if (index === -1) {
-            console.error(`Error: column ${filter} does not exist in sheet ${sheetName}`);
-            return null;
+            throw new Error(`Error: column ${filter} does not exist in sheet ${sheetName}`);
         }
         filterIndices[index] = filters[filter];
     }
@@ -81,6 +80,6 @@ const getRows = async (sheetName, filters = {}) => {
     return response;
 }
 
-export default {
+module.exports = {
     getRows: getRows
 }
