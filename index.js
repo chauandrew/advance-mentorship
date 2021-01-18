@@ -6,6 +6,7 @@ const port = process.env.PORT || 4000;
 const app = express(); // create express app
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
 app.set('port', port);
 
 const reactBuildPath = path.join(__dirname + '/client/build/index.html')
