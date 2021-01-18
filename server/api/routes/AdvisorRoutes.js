@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const gsheetService = require('../../services/GsheetService');
+const advisorService = require('../../services/AdvisorService')
 
 /**
  * All professional advisors who should be on the homepage
  */
 router.get('/', (_, res) => {
-    gsheetService.getRows('advisors', { "mainPage": "TRUE" })
+    advisorService.getMainAdvisors()
         .then(rows => res.json(rows))
         .catch(err => {
             res.status(400)
@@ -18,7 +18,7 @@ router.get('/', (_, res) => {
  * All professional advisors by campus short name (eg apu, american, ucla)
  */
 router.get('/campus/:campusName', (req, res) => {
-    gsheetService.getRows('advisors', { "gpCampus": req.params.campusName })
+    advisorService.getCampusAdvisors(req.params.campusName)
         .then(rows => res.json(rows))
         .catch(err => {
             res.status(400)
