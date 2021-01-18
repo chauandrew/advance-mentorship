@@ -16,7 +16,7 @@ const config = require('../config/google-sheets.json')
  * 
  * @param {string} sheetName - the name of the sheet to search
  * @param {Object} [filters={}] - case insensitive equality filters to match
- * @returns {Object} Object with 'columnNames', 'keymap' and 'rows' features
+ * @returns {Object} Object with 'columnNames', 'keymap', 'rows', and 'nrows' features
  */
 const getRows = async (sheetName, filters = {}) => {
     // check that sheet and filters exist
@@ -76,6 +76,7 @@ const getRows = async (sheetName, filters = {}) => {
             response['rows'].push(rows[i]);
         }
     }
+    response['nrows'] = response['rows'].length
     return response;
 }
 

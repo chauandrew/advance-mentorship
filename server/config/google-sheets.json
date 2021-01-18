@@ -42,6 +42,7 @@
             "company",
             "title",
             "linkedin",
+            "imgUrl",
             "degree3",
             "school3"
         ]
