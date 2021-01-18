@@ -46,5 +46,24 @@
             "degree3",
             "school3"
         ]
+    },
+    "signups": {
+        "sheetId": 1379371761,
+        "spreadsheetId": "12-fGFaICzJEJEN0p9MYJp5aAsTHmEqqgLK_Q-sbcwh0",
+        "columns": [
+            "firstname",
+            "lastname",
+            "email",
+            "gender",
+            "school",
+            "otherSchool",
+            "city",
+            "collegeTrack",
+            "careerTrack",
+            "adultingTrack",
+            "leadershipTrack",
+            "gradSchoolTrack",
+            "softSkillsTrack"
+        ]
     }
 }
