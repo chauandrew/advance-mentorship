@@ -1,0 +1,9 @@
+.advisor-img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.advisor-header {
+    display: flex;
+    justify-content: space-between;
+}

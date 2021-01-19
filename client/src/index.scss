@@ -11,8 +11,11 @@
 
 // Override default variables before the import
 $theme-colors: (
-  "primary": #EFCB6A
+  "primary": #EFCB6A,
+  "dark": #181818
 );
+
+$body-bg: #181818;
 
 h2, h4, h6 {
   font-family: Manrope;
