@@ -1,0 +1,41 @@
+.mentor-card {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.mentor-card-text {
+    height: 100%;
+    width: 100%;
+    font-size: 0.9em;
+    line-height: 135%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #181818;
+}
+
+.hover-wrapper:hover .overlay {
+opacity: 0.95;
+}
+
+.overlay-text {
+    font-family: Inter;
+    color: #e5e5e5;
+    position: absolute;
+    padding: 2vh;
+}
