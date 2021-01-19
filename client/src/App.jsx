@@ -18,10 +18,7 @@ function App() {
           <Route exact path="/advisors/:campusName" component={Pages.Advisors} />
           <Route exact path="/program" component={Pages.Program} />
           <Route exact path="/apply" component={Pages.Apply} />
-          {/* for unknown paths, reroute the user to the home page */}
-          <Route exact path="/*" component={() => {
-            window.location.href = "/"
-          }} />      </Switch>
+        </Switch>
       </BrowserRouter>
     </>
   );
