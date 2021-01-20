@@ -23,8 +23,8 @@ export default {
     /**
      * Submit a user's signup info
      * @param {Object} userInfo contains: firstname*, lastname*, email**, gender*, 
-     * school*, otherSchool, city*, collegeTrack, careerTrack, adultingTrack, 
-     * leadershipTrack, gradSchoolTrack, softSkillsTrack.
+     * school*, otherSchool, city, collegeTrack, careerTrack, adultingTrack, 
+     * leadershipTrack, gradSchoolTrack, eq101Track.
      * (*required, **must be edu email)
      */
     userSignup: async function (userInfo) {
