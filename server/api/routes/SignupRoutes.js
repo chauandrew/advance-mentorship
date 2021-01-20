@@ -8,9 +8,9 @@ const gsheetService = require('../../services/GsheetService');
 router.post('/', (req, res) => {
     if (!('firstname' in req.body) || !('lastname' in req.body) ||
         !('email' in req.body) || !('gender' in req.body) ||
-        !('school' in req.body) || !('city' in req.body)) {
+        !('school' in req.body)) {
         res.status(400)
-        res.send("Body must contain firstname, lastname, email, gender, school, city")
+        res.send("Body must contain firstname, lastname, email, gender, school")
     }
     const row = [
         req.body['firstname'],
@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
         req.body['adultingTrack'] ? true : false,
         req.body['leadershipTrack'] ? true : false,
         req.body['gradSchoolTrack'] ? true : false,
-        req.body['softSkillsTrack'] ? true : false
+        req.body['eq101Track'] ? true : false
     ]
     gsheetService.appendRows('signups', [row])
         .then(rows => res.json(rows))

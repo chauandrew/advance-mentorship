@@ -33,8 +33,8 @@ export default {
         }
         if (!('firstname' in userInfo) || !('lastname' in userInfo) ||
             !('email' in userInfo) || !('gender' in userInfo) ||
-            !('school' in userInfo) || !('city' in userInfo)) {
-            return Error("userInfo must contain firstname, lastname, email, gender, school, city")
+            !('school' in userInfo)) {
+            return Error("userInfo must contain firstname, lastname, email, gender, school")
         }
         return (await axios.post(`${prefix}/api/v1/signup`, userInfo))
     }
