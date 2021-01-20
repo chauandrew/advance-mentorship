@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div style={{"margin-top":"86px"}}> {/* the header is 86px tall */}
       <BrowserRouter>
         <Header />
         <Switch>
@@ -27,7 +27,7 @@ function App() {
         </Switch>
         <Footer />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
