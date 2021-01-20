@@ -29,7 +29,7 @@ const Mentors = () => {
     }, [])
 
     return (
-        <>
+        <div className="full-screen">
             <Container style={{ "max-width": "600px" }}>
                 <div className="text-center font-larger">
                     <h1 className="text-theme-yellow"
@@ -52,7 +52,7 @@ const Mentors = () => {
                     {mentors}
                 </Row>
             </Container>
-        </>
+        </div>
     )
 }
 

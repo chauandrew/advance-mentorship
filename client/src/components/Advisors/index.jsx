@@ -66,7 +66,7 @@ const Advisors = () => {
     }, [])
 
     return (
-        <Container className="p-5">
+        <Container className="p-5 full-screen">
             <Row className="mb-5">
                 <h1 className="text-theme-tan font-weight-400">Our Professional Advisors:</h1>
             </Row>

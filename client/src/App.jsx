@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Header from './components/core/Header';
+import Footer from './components/core/Footer';
 import * as Pages from './components';
 import './App.css';
 
@@ -19,7 +20,12 @@ function App() {
           <Route exact path="/advisors/:campusName" component={Pages.Advisors} />
           <Route exact path="/program" component={Pages.Program} />
           <Route exact path="/apply" component={Pages.Apply} />
+          {/* Legal Pages */}
+          <Route exact path="/terms-of-use" component={Pages.TermsOfUse} />
+          <Route exact path="/privacy" component={Pages.PrivacyPolicy} />
+          <Route exact path="/code-of-conduct" component={Pages.CodeOfConduct} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </>
   );

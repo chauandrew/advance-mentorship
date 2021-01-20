@@ -24,13 +24,28 @@
     background-color: #FCE9B8 !important;
 }
 
+.text-theme-orange {
+    color: #EFCB6A !important;
+}
+
+.bg-theme-orange {
+    background-color: #EFCB6A !important;
+}
+
 .text-theme-blue {
     color: #D0E0FF !important;
-    letter-spacing: 0.05em;
 }
 
 .bg-theme-blue {
     background-color: #D0E0FF !important;
+}
+
+.text-theme-dark {
+    color: #181818 !important;
+}
+
+.bg-theme-dark {
+    background-color: #181818 !important;
 }
 
 /* Font-styling classes */
@@ -77,4 +92,8 @@
 
 .font-weight-900 {
     font-weight: 900 !important;
+}
+
+.full-screen {
+    min-height: 100vh;
 }

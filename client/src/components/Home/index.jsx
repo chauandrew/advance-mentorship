@@ -3,7 +3,7 @@ import { Container, Button } from 'react-bootstrap';
 
 const Home = () => {
     return (
-        <Container>
+        <Container className="full-screen">
             <h2>ADVANCE<br />MENTORSHIP<br />PROGRAM</h2>
             <p>
                 Make your college journey matter.<br />

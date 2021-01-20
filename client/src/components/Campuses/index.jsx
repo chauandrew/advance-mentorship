@@ -26,7 +26,7 @@ const Campuses = () => {
     }, [])
 
     return (
-        <Container className="mb-5">
+        <Container className="mb-5 full-screen">
             <h1 className="text-theme-tan font-weight-300">Our Campuses</h1>
             <h6 className="text-theme-light font-weight-300">Don’t see your 
                 campus? You can still apply to get connected to a mentor 

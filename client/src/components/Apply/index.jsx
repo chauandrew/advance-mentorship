@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 
 const Apply = () => {
     return (
-        <Container>Apply here!</Container>
+        <Container className="full-screen">Apply here!</Container>
     )
 }
 
