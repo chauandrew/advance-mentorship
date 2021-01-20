@@ -21,6 +21,9 @@ app.get('/mentors', (_, res) => { res.sendFile(reactBuildPath); })
 app.get('/mentors/*', (_, res) => { res.sendFile(reactBuildPath); })
 app.get('/program', (_, res) => { res.sendFile(reactBuildPath); })
 app.get('/apply', (_, res) => { res.sendFile(reactBuildPath); })
+app.get('/terms-of-use', (_, res) => { res.sendFile(reactBuildPath); })
+app.get('/privacy', (_, res) => { res.sendFile(reactBuildPath); })
+app.get('/code-of-conduct', (_, res) => { res.sendFile(reactBuildPath); })
 
 // Backend calls under /server/routes/index
 const routes = require('./server/api/index');
