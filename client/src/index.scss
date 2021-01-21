@@ -17,6 +17,11 @@ $theme-colors: (
 
 $body-bg: #181818;
 
+.btn {
+  font-weight: 500 !important;
+  border-radius: 0.5rem !important;
+}
+
 h2, h4, h6 {
   font-family: Manrope;
 }
