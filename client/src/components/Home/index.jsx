@@ -1,16 +1,24 @@
 import { React } from 'react';
-import { Container, Button } from 'react-bootstrap';
+// import { Container, Button, Row } from 'react-bootstrap';
+
+import Header from './Header'
+import Why from './Why'
+import Companies from './Companies'
+import Who from './Who'
+import How from './How'
+import Photostrip from './Photostrip'
+import './style.css'
 
 const Home = () => {
     return (
-        <Container className="full-screen">
-            <h2>ADVANCE<br />MENTORSHIP<br />PROGRAM</h2>
-            <p>
-                Make your college journey matter.<br />
-                Designed for your personal and professional growth.
-            </p>
-            <Button href="/apply">Apply for a mentor</Button>
-        </Container>
+        <>
+            <Header />
+            <Why />
+            <Companies />
+            <Who />
+            <How />
+            <Photostrip />
+        </>
     )
 }
 
