@@ -37,3 +37,14 @@ opacity: 0.95;
     padding: 2vh;
     margin-left: 2vw;
 }
+
+.pb-3 {
+    padding-bottom: 3%;
+}
+
+.pt-7 {
+    padding-top: 7%;
+}
+.pb-10 {
+    padding-bottom: 10%;
+}

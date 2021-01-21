@@ -16,8 +16,8 @@ import './style.css';
 
 const Program = () => {
     return (
-        <Container className="full-screen">
-            <h1 className="text-theme-tan font-weight-400">The Mentorship Journey</h1>
+        <Container className="full-screen pt-7 pb-10">
+            <h1 className="text-theme-tan font-weight-400 pb-3">The Mentorship Journey</h1>
             <div>
                 <Row>
                     <Col sm={12} md={6} lg={3}>
@@ -30,7 +30,7 @@ const Program = () => {
                                     APPLY
                                 </h4>
                                 <p className="text-theme-light" style={description}>
-                                    Submit your application here and choose from one of our five personalized tracks below.
+                                    Submit your application <a href="">here</a> and choose from one of our five personalized tracks below.
                                 </p>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ const Program = () => {
                                     ATTEND A MEET & GREET ORIENTATION
                                 </h4>
                                 <p className="text-theme-light" style={description}>
-                                    After you apply, you will receive an email with the times and dates for a &quot;Meet & Greet&quot; orientation. If you do not get an email with the orientation dates within a week of applying, please contact us.
+                                    After you apply, you will receive an email with the times and dates for a &quot;Meet & Greet&quot; orientation. If you do not get an email with the orientation dates within a week of applying, please <a href="">contact us</a>.
                                 </p>
                             </div>
                         </div>
@@ -82,18 +82,13 @@ const Program = () => {
                     </Col>
                 </Row>
             </div>
-            <h1 className="text-theme-tan font-weight-400">Mentorship Tracks</h1>
+            <h1 className="text-theme-tan font-weight-400 pb-3">Mentorship Tracks</h1>
             <div>
                 <p className="text-theme-light">
                     We understand that everyone’s journey and needs are unique.
                     Personalize your mentorship experience by choosing one or all of our five tailored tracks below.
                     If you’d like to mix topics from 2 or more tracks, please let your advisor know at your meet & greet orientation.
                 </p>
-                <div>
-                    <p>
-                        
-                    </p>
-                </div>
                 <div style={trackList}>
                 <Row sm={1} lg={3}>
                     <Col className="hover-wrapper">
@@ -192,6 +187,8 @@ const Program = () => {
                     </Col>
                 </Row>
                 </div>
+                <h1 className="text-theme-tan font-weight-400 pb-3">Additional Programs</h1>
+                <p className="text-theme-light">Want to enhance your mentorship experience? You can work on community-based service projects with a cohort of like-minded students or complete a professional internship with us.</p>
             </div>
         </Container>
     )
