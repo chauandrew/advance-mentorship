@@ -97,3 +97,18 @@
 .full-screen {
     min-height: 100vh;
 }
+
+/* Program Card style */
+
+.programCard {
+    text-align: center;
+    top: 50%;
+    border: 1px solid #E2D5CD;
+    box-sizing: border-box;
+    padding: 80px 0px;
+    background-size: cover;
+    font-family: Manrope;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+}

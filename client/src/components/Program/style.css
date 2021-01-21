@@ -1,0 +1,38 @@
+/* Program Card style */
+
+.program-card {
+    text-align: center;
+    top: 50%;
+    border: 1px solid #E2D5CD;
+    box-sizing: border-box;
+    padding: 80px 0px;
+    background-size: cover;
+    font-family: Manrope;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #181818;
+}
+
+.hover-wrapper:hover .overlay {
+opacity: 0.95;
+}
+
+.overlay-text {
+    font-family: Inter;
+    color: #e5e5e5;
+    position: absolute;
+    padding: 2vh;
+}
