@@ -30,7 +30,7 @@ const Program = () => {
                                     APPLY
                                 </h4>
                                 <p className="text-theme-light" style={description}>
-                                    Submit your application <a href="">here</a> and choose from one of our five personalized tracks below.
+                                    Submit your application <a className="text-theme-yellow" href="/apply">here</a> and choose from one of our five personalized tracks below.
                                 </p>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ const Program = () => {
                                     ATTEND A MEET & GREET ORIENTATION
                                 </h4>
                                 <p className="text-theme-light" style={description}>
-                                    After you apply, you will receive an email with the times and dates for a &quot;Meet & Greet&quot; orientation. If you do not get an email with the orientation dates within a week of applying, please <a href="">contact us</a>.
+                                    After you apply, you will receive an email with the times and dates for a &quot;Meet & Greet&quot; orientation. If you do not get an email with the orientation dates within a week of applying, please <a className="text-theme-yellow" href="mailto:info@advancementorship.org">contact us</a>.
                                 </p>
                             </div>
                         </div>
