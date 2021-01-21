@@ -1,18 +1,29 @@
 import { React } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import './style.css'
+import journey1 from './assets/journey-01.png';
+import journey2 from './assets/journey-02.png';
+import journey3 from './assets/journey-03.png';
+import journey4 from './assets/journey-04.png';
+import allthingscollege from './assets/allthingscollege.png';
+import adulting from './assets/adulting-101.png';
+import careerfoundation from './assets/careerFoundation.png';
+import eq101 from './assets/eq101.png';
+import leadership from './assets/leadership-x.png';
+import guidetograd from './assets/guide-to-grad-school.png';
+
+import './style.css';
 
 const Program = () => {
     return (
         <Container className="full-screen">
-            <h1 className="text-theme-tan font-weight-500">The Mentorship Journey</h1>
+            <h1 className="text-theme-tan font-weight-400">The Mentorship Journey</h1>
             <div>
                 <Row>
                     <Col sm={12} md={6} lg={3}>
                         <div style={phase}>
                             <div style={iconContainer}>
-                                <img style={icon} src="https://images.squarespace-cdn.com/content/v1/5fed661250339566e9b294d3/1609673277171-CMHPTYSC4I5F68SC4XYP/ke17ZwdGBToddI8pDm48kN3T9SxbiRQr1PJzz7qdcyBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI0haGQu8WJ9ULU6PALUsEJErEd1hR55W9Bq4Q0kxRInQ/journey-01.png" />   
+                                <img style={icon} src={journey1} />   
                             </div>
                             <div style={description}>
                                 <h4 className="text-theme-tan">
@@ -27,7 +38,7 @@ const Program = () => {
                     <Col sm={12} md={6} lg={3}>
                         <div style={phase}>
                             <div style={iconContainer}>
-                                <img style={icon} src="https://images.squarespace-cdn.com/content/v1/5fed661250339566e9b294d3/1609673280319-DOE1FZULRAWUP9XMHLL5/ke17ZwdGBToddI8pDm48kN3T9SxbiRQr1PJzz7qdcyBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI0haGQu8WJ9ULU6PALUsEJErEd1hR55W9Bq4Q0kxRInQ/journey-02.png" />   
+                                <img style={icon} src={journey2} />   
                             </div>
                             <div style={description}>
                                 <h4 className="text-theme-tan">
@@ -42,7 +53,7 @@ const Program = () => {
                     <Col sm={12} md={6} lg={3}>
                         <div style={phase}>
                             <div style={iconContainer}>
-                                <img style={icon} src="https://images.squarespace-cdn.com/content/v1/5fed661250339566e9b294d3/1609673309876-ZAVLRKT3AR597L0103WD/ke17ZwdGBToddI8pDm48kN3T9SxbiRQr1PJzz7qdcyBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI0haGQu8WJ9ULU6PALUsEJErEd1hR55W9Bq4Q0kxRInQ/journey-03.png" />   
+                                <img style={icon} src={journey3} />   
                             </div>
                             <div style={description}>
                                 <h4 className="text-theme-tan">
@@ -57,7 +68,7 @@ const Program = () => {
                     <Col sm={12} md={6} lg={3}>
                         <div style={phase}>
                             <div style={iconContainer}>
-                                <img style={icon} src="https://images.squarespace-cdn.com/content/v1/5fed661250339566e9b294d3/1609673323990-ZJKU5DXFZ4IJXAP0EMEC/ke17ZwdGBToddI8pDm48kN3T9SxbiRQr1PJzz7qdcyBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI0haGQu8WJ9ULU6PALUsEJErEd1hR55W9Bq4Q0kxRInQ/journey-04.png" />   
+                                <img style={icon} src={journey4} />   
                             </div>
                             <div style={description}>
                                 <h4 className="text-theme-tan">
@@ -71,13 +82,18 @@ const Program = () => {
                     </Col>
                 </Row>
             </div>
-            <h1 className="text-theme-tan font-weight-500">Mentorship Tracks</h1>
+            <h1 className="text-theme-tan font-weight-400">Mentorship Tracks</h1>
             <div>
                 <p className="text-theme-light">
-                    We understand that everyone’s journey and needs are unique. \
-                    Personalize your mentorship experience by choosing one or all of our five tailored tracks below. \
+                    We understand that everyone’s journey and needs are unique.
+                    Personalize your mentorship experience by choosing one or all of our five tailored tracks below.
                     If you’d like to mix topics from 2 or more tracks, please let your advisor know at your meet & greet orientation.
                 </p>
+                <div>
+                    <p>
+                        
+                    </p>
+                </div>
                 <div style={trackList}>
                 <Row sm={1} lg={3}>
                     <Col className="hover-wrapper">
@@ -96,32 +112,83 @@ const Program = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col >
-                        <p className="programCard text-theme-light" style={allThingsCollege}>
-                            ALL THINGS COLLEGE
+                    <Col className="hover-wrapper">
+                        <p className="program-card text-theme-light" style={careerFoundations}>
+                            CAREER FOUNDATIONS
                         </p>
+                        <div className="overlay">
+                            <div className="overlay-text">
+                                <b>EXAMPLE TOPICS</b>
+                                <br />Resume Review/Tips
+                                <br />Interview Prep & Practice
+                                <br />Job Searching
+                                <br />Building Professional Relationships
+                                <br />Developing Online Presence
+                            </div>
+                        </div>
                     </Col>
-                    <Col >
-                        <p className="programCard text-theme-light" style={allThingsCollege}>
-                            ALL THINGS COLLEGE
+                    <Col className="hover-wrapper">
+                        <p className="program-card text-theme-light" style={Adulting}>
+                            ADULTING 101
                         </p>
+                        <div className="overlay">
+                            <div className="overlay-text">
+                                <b>EXAMPLE TOPICS</b>
+                                <br />5 Ingredients, 5 Meals
+                                <br />Meals with a Microwave
+                                <br />Groceries on a Budget
+                                <br />6 Eggscellent Dishes
+                                <br />Basic Home & Car Repairs
+                                <br />Taxes
+                            </div>
+                        </div>
                     </Col>
                 </Row>
                 <Row sm={1} lg={3}>
-                    <Col >
-                        <p className="programCard text-theme-light" style={allThingsCollege}>
-                            ALL THINGS COLLEGE
+                <Col className="hover-wrapper">
+                        <p className="program-card text-theme-light" style={EQ}>
+                            EQ 101
                         </p>
+                        <div className="overlay">
+                            <div className="overlay-text">
+                                <b>EXAMPLE TOPICS</b>
+                                <br />How to Make Friends
+                                <br />How to Deal with Roommate Conflict
+                                <br />The Art of Conversation
+                                <br />Dealing with Feedback Healthily
+                                <br />Increasing my Emotional Intelligence
+                                <br />Key to an Analytical Mind
+                            </div>
+                        </div>
                     </Col>
-                    <Col >
-                        <p className="programCard text-theme-light" style={allThingsCollege}>
-                            ALL THINGS COLLEGE
+                    <Col className="hover-wrapper">
+                        <p className="program-card text-theme-light" style={leadershipX}>
+                            LEADERSHIPX
                         </p>
+                        <div className="overlay">
+                            <div className="overlay-text">
+                                <b>FORMAT</b>
+                                <br />Leadership talks with experts in their field
+                                <br />ADVANCE Initiative (Community-Based Service Project)
+                                <br />Individualized Consulting
+                                <br />Growth Plans
+                            </div>
+                        </div>
                     </Col>
-                    <Col >
-                        <p className="programCard text-theme-light" style={allThingsCollege}>
-                            ALL THINGS COLLEGE
+                    <Col className="hover-wrapper">
+                        <p className="program-card text-theme-light" style={guide2Grad}>
+                            GUIDE TO GRAD SCHOOL
                         </p>
+                        <div className="overlay">
+                            <div className="overlay-text">
+                                <b>EXAMPLE TOPICS</b>
+                                <br />Grad School Tests
+                                <br />Applying
+                                <br />Masters or Doctorate?
+                                <br />Personal Statements
+                                <br />Options for Paying
+                            </div>
+                        </div>
                     </Col>
                 </Row>
                 </div>
@@ -150,12 +217,27 @@ const description = {
 };
 
 const allThingsCollege = {
-    backgroundImage: "url('https://static1.squarespace.com/static/5fed661250339566e9b294d3/t/5ffec29f72238a5c80eaa4a8/1610531489103/allthingscollege.png')",
-}
+    backgroundImage: `url(${allthingscollege})`,
+};
+const EQ = {
+    backgroundImage: `url(${eq101})`,
+};
+const Adulting = {
+    backgroundImage: `url(${adulting})`,
+};
+const careerFoundations = {
+    backgroundImage: `url(${careerfoundation})`,
+};
+const leadershipX = {
+    backgroundImage: `url(${leadership})`,
+};
+const guide2Grad = {
+    backgroundImage: `url(${guidetograd})`,
+};
 
 const trackList = {
     marginTop: "2%",
     marginBottom: "2%",
-}
+};
 
 export default Program;
