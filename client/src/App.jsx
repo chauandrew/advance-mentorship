@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Header from './components/core/Header';
+import Navbar from './components/core/Navbar';
 import Footer from './components/core/Footer';
 import * as Pages from './components';
 import './App.css';
@@ -10,7 +10,7 @@ function App() {
   return (
     <div style={{"margin-top":"86px"}}> {/* the header is 86px tall */}
       <BrowserRouter>
-        <Header />
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Pages.Home} />
           <Route exact path="/campuses" component={Pages.Campuses} />

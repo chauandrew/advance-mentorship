@@ -5,8 +5,7 @@ import Logo from '../../../assets/amp-logo-header.png'
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect fixed="top" expand="md" bg="dark" variant="dark" 
-      className="mr-3 ml-3">
+    <Navbar collapseOnSelect fixed="top" expand="md" bg="dark" variant="dark">
       <Navbar.Brand href="/">
         <img src={Logo} alt="Logo" height="60" />
       </Navbar.Brand>
