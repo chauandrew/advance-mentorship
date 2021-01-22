@@ -16,7 +16,7 @@ import './style.css';
 
 const Program = () => {
     return (
-        <Container className="full-screen pt-7 pb-10">
+        <Container className="full-screen pt-5 pb-5 mb-5">
             <h1 className="text-theme-tan font-weight-400 pb-3">The Mentorship Journey</h1>
             <div>
                 <Row>
@@ -96,7 +96,7 @@ const Program = () => {
                             ALL THINGS COLLEGE
                         </p>
                         <div className="overlay">
-                            <div className="overlay-text">
+                            <div className="overlay-text ml-2">
                                 <b>EXAMPLE TOPICS</b>
                                 <br />Getting Rec. Letters
                                 <br />On-Campus Job
@@ -112,7 +112,7 @@ const Program = () => {
                             CAREER FOUNDATIONS
                         </p>
                         <div className="overlay">
-                            <div className="overlay-text">
+                            <div className="overlay-text ml-2">
                                 <b>EXAMPLE TOPICS</b>
                                 <br />Resume Review/Tips
                                 <br />Interview Prep & Practice
@@ -127,7 +127,7 @@ const Program = () => {
                             ADULTING 101
                         </p>
                         <div className="overlay">
-                            <div className="overlay-text">
+                            <div className="overlay-text ml-4">
                                 <b>EXAMPLE TOPICS</b>
                                 <br />5 Ingredients, 5 Meals
                                 <br />Meals with a Microwave
@@ -145,7 +145,7 @@ const Program = () => {
                             EQ 101
                         </p>
                         <div className="overlay">
-                            <div className="overlay-text">
+                            <div className="overlay-text ml-2">
                                 <b>EXAMPLE TOPICS</b>
                                 <br />How to Make Friends
                                 <br />How to Deal with Roommate Conflict
@@ -161,7 +161,7 @@ const Program = () => {
                             LEADERSHIPX
                         </p>
                         <div className="overlay">
-                            <div className="overlay-text">
+                            <div className="overlay-text ml-2">
                                 <b>FORMAT</b>
                                 <br />Leadership talks with experts in their field
                                 <br />ADVANCE Initiative (Community-Based Service Project)
@@ -175,7 +175,7 @@ const Program = () => {
                             GUIDE TO GRAD SCHOOL
                         </p>
                         <div className="overlay">
-                            <div className="overlay-text">
+                            <div className="overlay-text ml-2">
                                 <b>EXAMPLE TOPICS</b>
                                 <br />Grad School Tests
                                 <br />Applying
