@@ -13,9 +13,9 @@ const Bio = ({name, degree1, school1, degree2, school2, company, title, imgUrl,
         <div className="advisor-header mt-3">
             <h4 className="text-theme-yellow" style={{"letter-spacing": "0.05em"}}>
                 {name.toUpperCase()}</h4>
-            <a href={linkedin} target="blank">
+            { linkedin ? <a href={linkedin} target="blank">
                 <img src={LinkedInLogo} width="30" />
-            </a>
+            </a> : <></>}
         </div>
     summary.push(nameElement)
 
@@ -30,7 +30,6 @@ const Bio = ({name, degree1, school1, degree2, school2, company, title, imgUrl,
             </div>)
         }
     }
-    console.log(summary)
 
     return (
         <div className="mt-5" style={{"vertical-align":"top"}}>
