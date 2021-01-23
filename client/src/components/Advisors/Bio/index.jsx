@@ -20,10 +20,8 @@ const Bio = ({name, degree1, school1, degree2, school2, company, title, imgUrl,
     summary.push(nameElement)
 
     let iter = [[company, title], [school3, degree3], [school2, degree2], [school1, degree1]]
-    console.log(iter)
     for (let i = 0; i < iter.length; ++i) {
         if (iter[i][0] && iter[i][1]) {
-            console.log(iter[i])
             summary.push(<div className="text-theme-light">
                 <p className="m-0 font-small"><i>{iter[i][0]}</i></p>
                 <p className="m-0">{iter[i][1]}</p>
