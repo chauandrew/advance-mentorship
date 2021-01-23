@@ -1,8 +1,21 @@
 const { JWT } = require('google-auth-library')
 const axios = require('axios');
 
-const CLIENT_EMAIL = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL;
-const PRIVATE_KEY = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY.replace(/\\n/gm, '\n'); // use real line breaks
+// Using 5 different service accounts to balance rate-limiting
+const CLIENT_EMAIL1 = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL1;
+const PRIVATE_KEY1 = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY1.replace(/\\n/gm, '\n'); // use real line breaks
+const CLIENT_EMAIL2 = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL2;
+const PRIVATE_KEY2 = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY2.replace(/\\n/gm, '\n'); // use real line breaks
+const CLIENT_EMAIL3 = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL3;
+const PRIVATE_KEY3 = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY3.replace(/\\n/gm, '\n'); // use real line breaks
+const CLIENT_EMAIL4 = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL4;
+const PRIVATE_KEY4 = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY4.replace(/\\n/gm, '\n'); // use real line breaks
+const CLIENT_EMAIL5 = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL5;
+const PRIVATE_KEY5 = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY5.replace(/\\n/gm, '\n'); // use real line breaks
+
+const CLIENT_EMAILS = [CLIENT_EMAIL1, CLIENT_EMAIL2, CLIENT_EMAIL3, CLIENT_EMAIL4, CLIENT_EMAIL5]
+const PRIVATE_KEYS = [PRIVATE_KEY1, PRIVATE_KEY2, PRIVATE_KEY3, PRIVATE_KEY4, PRIVATE_KEY5]
+
 const GOOGLE_AUTH_SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 
 const config = require('../config/google-sheets.json')
@@ -15,9 +28,10 @@ const config = require('../config/google-sheets.json')
  * @returns {string} authorization string
  */
 const authorize = async () => {
+    const i = Math.floor(Math.random() * 5)
     const client = new JWT({
-        email: CLIENT_EMAIL,
-        key: PRIVATE_KEY,
+        email: CLIENT_EMAILS[i],
+        key: PRIVATE_KEYS[i],
         scopes: GOOGLE_AUTH_SCOPES
     })
     const creds = await client.authorize();
